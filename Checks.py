@@ -14,3 +14,9 @@ def size_check(pizza_size):
         pizza_size = input("Please choose the appropriate size from the list above: ")
     print("Your choice of {} has been selected".format(pizza_size))
     return pizza_size
+
+def topping_check(pizza_topping):
+    while pizza_topping not in topping_pizza:
+        pizza_topping = input("Please select the appropriate topping from the list above: ")
+    print("You have added a {} topping to your Pizza!!".format(pizza_topping))
+    return pizza_topping
