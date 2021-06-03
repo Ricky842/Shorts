@@ -34,3 +34,5 @@ def rating():
     print("Your favorite movie was {} with a rating of {}".format(favMovie, highest_rating))
 
 rating()
+
+#Initial commit to Git
