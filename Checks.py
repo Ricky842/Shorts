@@ -1,21 +1,21 @@
-pizza_name = ['BBQ Steak', 'Chicken Haiwaian',
-              'Chicken Macon BBQ', 'Veg Feast']
+pizza_name = ['Bbq Steak', 'Chicken Haiwaian',
+              'Chicken Macon Bbq', 'Veg Feast']
 size_pizza = ["Large", "Small", "Medium"]
 topping_pizza = ['Pepporoni', 'Cheese', 'Beef', 'Chicken']
 
 def type_check(pizza_type):
     if pizza_type == "1":
-        pizza_type = "BBQ Steak"
+        pizza_type = "Bbq Steak"
     elif pizza_type == "2":
         pizza_type = "Chicken Haiwaian"
     elif pizza_type == "3":
-        pizza_type = "Chicken Macon BBQ"
+        pizza_type = "Chicken Macon Bbq"
     elif pizza_type == "4":
         pizza_type = "Veg Feast"
-    else:
-        return pizza_type
     while pizza_type not in pizza_name:
-        pizza_type = input("Please choose the appropriate type from the list: ")
+        pizza_type_ret = input("Please choose the appropriate type from the list: ").title()
+        pizza_type = type_check(pizza_type_ret)
+        return pizza_type
     print("Your choice of {} has been selected". format(pizza_type))
     return pizza_type
 
@@ -26,10 +26,10 @@ def size_check(pizza_size):
         pizza_size = "Medium"
     elif pizza_size == "3":
         pizza_size = "Small"
-    else:
-        return pizza_size
     while pizza_size not in size_pizza:
-        pizza_size = input("Please choose the appropriate size from the list above: ")
+        pizza_size_ret = input("Please choose the appropriate size from the list above: ").title()
+        pizza_size = size_check(pizza_size_ret)
+        return pizza_size
     print("Your choice of {} has been selected".format(pizza_size))
     return pizza_size
 
@@ -42,9 +42,9 @@ def topping_check(pizza_topping):
         pizza_topping = "Beef"
     elif pizza_topping == "4":
         pizza_topping = "Chicken"
-    else:
-        return pizza_topping
     while pizza_topping not in topping_pizza:
-        pizza_topping = input("Please select the appropriate topping from the list above: ")
+        pizza_topping_ret = input("Please select the appropriate topping from the list above: ").title()
+        pizza_topping = topping_check(pizza_topping_ret)
+        return pizza_topping
     print("You have added a {} topping to your Pizza!!".format(pizza_topping))
     return pizza_topping

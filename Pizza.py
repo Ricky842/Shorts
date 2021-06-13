@@ -1,7 +1,6 @@
 #Build a Pizza from Scratch
 #User gets to choose from a list of Pizza Names
 #They then get to choose to add extra toppings and cheese
-#Finally, a choice of a side - either a soda or juice
 #Total cost of the order
 
 from Questions import Questions
@@ -23,15 +22,15 @@ topping_questions = [Questions(topping_prompt[0],"")]
 
 def pizza_check(type_questions, size_questions,topping_questions):
     for question in type_questions:
-        type_answer_res = input(question.prompt)
+        type_answer_res = input(question.prompt).title()
         type_answer = type_check(type_answer_res)
     for question in size_questions:
-        size_answer = input(question.prompt)
+        size_answer = input(question.prompt).title()
         size_answer = size_check(size_answer)
     for question in topping_questions:
-        topping_answer = input(question.prompt)
+        topping_answer = input(question.prompt).title()
         topping_answer = topping_check(topping_answer)
     final_price = price(type_answer, size_answer, topping_answer)
-    print("You want a {} {} Pizza with {} toppings.\nTotal price is {}".format(size_answer, type_answer, topping_answer, final_price))
+    print("You want a {} {} Pizza with {} toppings.\nTotal Price is {}".format(size_answer, type_answer, topping_answer, final_price))
     
 pizza_check(type_questions,size_questions,topping_questions)

@@ -1,5 +1,5 @@
 def price(pizza_type, pizza_size, pizza_topping):
-    if pizza_type == "BBQ Steak":
+    if pizza_type == "Bbq Steak":
         type_price = 750
         if pizza_size == "Large":
             size_price = 250
@@ -43,7 +43,7 @@ def price(pizza_type, pizza_size, pizza_topping):
             topping_price = 0
         total_price = type_price + size_price + topping_price
         return total_price
-    elif pizza_type == "Chicken Macon BBQ":
+    elif pizza_type == "Chicken Macon Bbq":
         type_price = 950
         if pizza_size == "Large":
             size_price = 250
@@ -89,4 +89,4 @@ def price(pizza_type, pizza_size, pizza_topping):
         return total_price
     else:
         total_price = 0
-        
+
