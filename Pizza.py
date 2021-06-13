@@ -6,6 +6,7 @@
 
 from Questions import Questions
 from Checks import topping_check, type_check, size_check
+from Prices import price
 
 type_prompt = ["What type of Pizza do you want?\n1.BBQ Steak\n2.Chicken Haiwaian\n"
 "3.Chicken Macon BBQ\n4.Veg Feast\n",]
@@ -30,6 +31,7 @@ def pizza_check(type_questions, size_questions,topping_questions):
     for question in topping_questions:
         topping_answer = input(question.prompt)
         topping_answer = topping_check(topping_answer)
-    print("You want a {} {} Pizza with {} toppings".format(size_answer, type_answer, topping_answer))
+    final_price = price(type_answer, size_answer, topping_answer)
+    print("You want a {} {} Pizza with {} toppings.\nTotal price is {}".format(size_answer, type_answer, topping_answer, final_price))
     
 pizza_check(type_questions,size_questions,topping_questions)
