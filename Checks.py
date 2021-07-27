@@ -16,7 +16,7 @@ def type_check(pizza_type):
         pizza_type_ret = input("Please choose the appropriate type from the list: ").title()
         pizza_type = type_check(pizza_type_ret)
         return pizza_type
-    print("Your choice of {} has been selected". format(pizza_type))
+    print(f"Your choice of {pizza_type} has been selected")
     return pizza_type
 
 def size_check(pizza_size):
@@ -30,7 +30,7 @@ def size_check(pizza_size):
         pizza_size_ret = input("Please choose the appropriate size from the list above: ").title()
         pizza_size = size_check(pizza_size_ret)
         return pizza_size
-    print("Your choice of {} has been selected".format(pizza_size))
+    print(f"Your choice of {pizza_size} has been selected")
     return pizza_size
 
 def topping_check(pizza_topping):
@@ -46,5 +46,5 @@ def topping_check(pizza_topping):
         pizza_topping_ret = input("Please select the appropriate topping from the list above: ").title()
         pizza_topping = topping_check(pizza_topping_ret)
         return pizza_topping
-    print("You have added a {} topping to your Pizza!!".format(pizza_topping))
+    print(f"You have added a {pizza_topping} topping to your Pizza!!")
     return pizza_topping

@@ -20,7 +20,7 @@ def rating():
     numMovies = int(input("How many movies have you watched this year? "))
     while len(movies) < numMovies:
         movie_name = input("Please enter the name of the movie: ")
-        movie_rating = input("Please enter the rating of {} between 1 and 10: ".format(movie_name))
+        movie_rating = input(f"Please enter the rating of {movie_name} between 1 and 10: ")
         movie_rating = check_entry(movie_rating)
         movie_rating = int(movie_rating)
         movie_dict = {'movie': movie_name, 'rating':movie_rating}
@@ -31,7 +31,7 @@ def rating():
             highest_rating = movie['rating']
             favMovie = movie['movie']
 
-    print("Your favorite movie was {} with a rating of {}".format(favMovie, highest_rating))
+    print(f"Your favorite movie was {favMovie} with a rating of {highest_rating}")
 
 rating()
 
